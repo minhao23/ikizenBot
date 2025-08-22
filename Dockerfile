@@ -7,6 +7,7 @@ WORKDIR /app
 # Copy the Maven wrapper and the pom.xml file first (this leverages Docker cache)
 COPY .mvn/ .mvn
 COPY mvnw pom.xml ./
+RUN chmod +x mvnw
 
 # Copy the source code
 COPY src ./src
