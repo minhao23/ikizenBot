@@ -1,0 +1,13 @@
+# This file defines your service on Render.
+# See https://render.com/docs/render-yaml-spec for more details.
+
+services:
+  - type: web
+    name: java-telegram-bot
+    runtime: docker
+    dockerfile: Dockerfile # Path to your Dockerfile
+    plan: free # Or 'starter'/'standard' for paid plans
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+    port: 8080 # The port your Spring Boot app listens on inside the container
