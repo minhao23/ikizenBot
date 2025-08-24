@@ -1,4 +1,5 @@
-import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+package bot;
+
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 public class Parser {

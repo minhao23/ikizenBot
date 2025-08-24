@@ -1,3 +1,7 @@
+package bot;
+
+import bot.CommandType;
+
 public class Message {
 
     public static String buildMessage(CommandType commandType) {
