@@ -12,16 +12,16 @@ public class Message {
         switch (commandType) {
             case START:
                 return "🚀 Welcome to the ikizen!\n\n" +
-                        "To start the bot, click the Open button at the bottom left corner. " +
+                        "To start the bot, click the Open button at the bottom left corner.\n" +
                         "I can help you with improving your productivity.\n"+
                         "Let's have a great day together!";
 
             case HELP:
                 return "📖 Available Commands:\n\n" +
                         "/start - Start the bot\n" +
-                        "/help - Show this help message\n\n"+
+                        "/help - Show this help message\n"+
                         "/helptodo - Provides an explanation on how to use the todo list\n"+
-                        "/helptimer - Provides an explanation on how to use the timer";
+                        "/helptimer - Provides an explanation on how to use the timer\n";
 
             case ECHO:
                 return "Hi, that's not one of our commands,\n use the drop down to start, " +
@@ -37,9 +37,10 @@ public class Message {
                         "To better optimise your usage of the pomodoro timer, " +
                         "take a short break after every working session, and a long break every once in a awhile!";
             case HELPTODO:
-                return "\uD83D\uDCCB  This is the Todo List!\n" +
-                        "based on the [Eisenhower Matrix](https://en.wikipedia.org/wiki/Priority_Matrix)" +
-                        "Ikizen will provide you with a way clear way of dividing your tasks by priority";
+                return  "📋  This is the Todo List!\n" +
+                        "based on the [Eisenhower Matrix](https://en\\.wikipedia\\.org/wiki/Priority\\_Matrix)\n" +
+                        "Ikizen will provide you with a clear way of dividing your tasks by priority";
+
 
             default:
                 return "Something went wrong. Please try again.";

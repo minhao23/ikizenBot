@@ -16,7 +16,7 @@ public class Bot extends TelegramWebhookBot {
 
     @Override
     public String getBotToken() {
-        return "7727848236:AAGCUgowWrClJS3LDXoaYaSQ4aH1kh1Lhr8";
+        return System.getenv("BOT_TOKEN");
     }
 
     @Override
@@ -30,9 +30,11 @@ public class Bot extends TelegramWebhookBot {
         String reply = Parser.reply(update);
         Long user = Parser.getID(update);
 
-        return SendMessage.builder()
+        SendMessage message = SendMessage.builder()
                 .chatId(user.toString())
                 .text(reply)
                 .build();
+        message.setParseMode("MarkdownV2");
+        return message;
     }
 }
