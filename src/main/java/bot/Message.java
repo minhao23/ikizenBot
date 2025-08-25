@@ -37,10 +37,9 @@ public class Message {
                         "To better optimise your usage of the pomodoro timer, " +
                         "take a short break after every working session, and a long break every once in a awhile!";
             case HELPTODO:
-                return  "📋  This is the Todo List!\n" +
-                    "Based on the [Eisenhower Matrix](https://en.wikipedia.org/wiki/Priority\\_Matrix)\n" +
-                    "Ikizen will provide you with a clear way of dividing your tasks by priority";
-
+                return  "📋 This is the Todo List.\n" +
+                        "Based on the [Eisenhower Matrix](https://en.wikipedia.org/wiki/Priority\\_Matrix)\n" +
+                        "Ikizen will provide you with a clear way of dividing your tasks by priority";
 
             default:
                 return "Something went wrong. Please try again.";
