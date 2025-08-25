@@ -11,15 +11,17 @@ public class Message {
     public static String buildMessage(CommandType commandType, String additionalText) {
         switch (commandType) {
             case START:
-                return "🚀 Welcome to the bot!\n\n" +
-                        "I can help you with various tasks. " +
-                        "Use /help to see available commands.";
+                return "🚀 Welcome to the ikizen!\n\n" +
+                        "To start the bot, click the Open button at the bottom left corner. " +
+                        "I can help you with improving your productivity.\n"+
+                        "Let's have a great day together!";
 
             case HELP:
                 return "📖 Available Commands:\n\n" +
                         "/start - Start the bot\n" +
-                        "/help - Show this help message\n\n" +
-                        "Just send me any message and I'll echo it back!";
+                        "/help - Show this help message\n\n"+
+                        "/helptodo - Provides an explanation on how to use the todo list\n"+
+                        "/helptimer - Provides an explanation on how to use the timer";
 
             case ECHO:
                 return "Hi, that's not one of our commands,\n use the drop down to start, " +
@@ -27,6 +29,17 @@ public class Message {
             case ERROR:
                 return "❌ Sorry, I didn't understand that command.\n" +
                         "Use /help to see available commands.";
+            case HELPTIMER:
+                return "⏰ This is the pomodoro timer.\n" +
+                        "This technique aims to improve focus, productivity, " +
+                        "and reduce burnout by working in shorter, " +
+                        "more manageable blocks of time. " +
+                        "To better optimise your usage of the pomodoro timer, " +
+                        "take a short break after every working session, and a long break every once in a awhile!";
+            case HELPTODO:
+                return "\uD83D\uDCCB  This is the Todo List!\n" +
+                        "based on the [Eisenhower Matrix](https://en.wikipedia.org/wiki/Priority_Matrix)" +
+                        "Ikizen will provide you with a way clear way of dividing your tasks by priority";
 
             default:
                 return "Something went wrong. Please try again.";

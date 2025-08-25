@@ -24,10 +24,14 @@ public class Parser {
             return CommandType.START;
         } else if (text.equals("/help")) {
             return CommandType.HELP;
+        } else if (text.equals("/helptodo")) {
+            return CommandType.HELPTODO;
+        } else if (text.equals("/helptimer")) {
+            return CommandType.HELPTIMER;
         } else if (text.startsWith("/")) {
             return CommandType.ERROR;
         } else {
-            return CommandType.ECHO;
+            return CommandType.ERROR;
         }
     }
 
