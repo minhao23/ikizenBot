@@ -16,7 +16,8 @@ public class Bot extends TelegramWebhookBot {
 
     @Override
     public String getBotToken() {
-        return System.getenv("BOT_TOKEN");
+        //return System.getenv("BOT_TOKEN");
+        return "7727848236:AAGCUgowWrClJS3LDXoaYaSQ4aH1kh1Lhr8";
     }
 
     @Override
