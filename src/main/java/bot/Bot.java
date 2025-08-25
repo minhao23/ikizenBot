@@ -25,6 +25,9 @@ public class Bot extends TelegramWebhookBot {
         // This is part of your webhook URL → https://yourdomain.onrender.com/webhook
         return "webhook";
     }
+    public static String escapeMarkdownV2(String text) {
+        return text.replaceAll("([_\\*\\[\\]\\(\\)~`>#+\\-=|{}.!])", "\\\\$1");
+    }
 
     @Override
     public SendMessage onWebhookUpdateReceived(Update update) {
@@ -36,6 +39,7 @@ public class Bot extends TelegramWebhookBot {
                 .text(reply)
                 .build();
         message.setParseMode("MarkdownV2");
+        message.setText(escapeMarkdownV2(reply));
         return message;
     }
 }
